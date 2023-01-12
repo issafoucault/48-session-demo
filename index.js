@@ -26,4 +26,4 @@ app.get('/greet', (req, res) => {
     res.send(`Welcome back, ${username}`)
 })
 
-app.listen(port, () => console.log(`Cookies demo app listening on port ${port}!`));
+app.listen(port, () => console.log(`Session demo app listening on port ${port}!`));
