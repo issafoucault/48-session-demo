@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const session = require('express-session');
+const port = process.env.PORT || 3001;
 
 const sessionOptions = { secret: 'thisisnotagoodsecret', resave: false, saveUninitialized: false }
 app.use(session(sessionOptions));
@@ -25,6 +26,4 @@ app.get('/greet', (req, res) => {
     res.send(`Welcome back, ${username}`)
 })
 
-app.listen(3000, () => {
-    console.log('listening on port 3000')
-})
+app.listen(port, () => console.log(`Cookies demo app listening on port ${port}!`));
